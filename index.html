@@ -1,109 +1,754 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
+<html lang="tr"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eğitimde İyi Örnekler - Bursa İl MEM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style id="antigravity-scroll-lock-style">
+  html:root body.antigravity-scroll-lock {
+    overflow: hidden !important;
+  }
+</style></head>
+
+<body class="">
     <style>
-        body::-webkit-scrollbar { display: none; }
-        html::-webkit-scrollbar { display: none; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; overflow-x: hidden; }
-        .top-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid #667eea; }
-        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo-section { display: flex; align-items: center; gap: 15px; }
-        .logo-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
-        .logo-text h1 { font-size: 20px; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin: 0; line-height: 1.2; }
-        .logo-text p { font-size: 11px; color: #666; margin: 0; font-weight: 500; }
-        .nav-menu { display: flex; gap: 5px; list-style: none; margin: 0; padding: 0; }
-        .nav-menu li a { padding: 10px 20px; color: #333; text-decoration: none; font-weight: 500; font-size: 14px; border-radius: 8px; transition: all 0.3s ease; display: flex; align-items: center; gap: 6px; }
-        .nav-menu li a:hover { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; transform: translateY(-2px); }
-        .btn-submit-nav { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white !important; padding: 12px 28px !important; border-radius: 25px; font-weight: 600; box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4); border: none; }
-        .btn-submit-nav:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6); }
-        .dropdown { position: relative; }
-        .dropdown-menu { position: absolute; top: calc(100% + 15px); left: 0; background: white; min-width: 240px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); padding: 10px; display: none; z-index: 1000; list-style: none; border: 1px solid rgba(0, 0, 0, 0.05); opacity: 0; transform: translateY(10px); transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
-        .dropdown.active .dropdown-menu { display: block; opacity: 1; transform: translateY(0); }
-        .dropdown-menu li a { padding: 12px 20px; color: #2c3e50; border-radius: 10px; display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; }
-        .dropdown-menu li a:hover { background: #f8f9fa; color: #667eea; transform: translateX(5px); }
-        .dropdown-menu li a i { font-size: 16px; color: #a0aec0; transition: color 0.3s; }
-        .dropdown-menu li a:hover i { color: #667eea; }
-        .dropdown>a .bi-chevron-down { font-size: 10px; margin-left: 2px; transition: transform 0.3s; }
-        .dropdown.active>a .bi-chevron-down { transform: rotate(180deg); }
-        .hero-carousel { max-width: 1400px; margin: 50px auto; padding: 0 30px; position: relative; height: 500px; overflow: hidden; }
-        .carousel-container { position: relative; height: 100%; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3); }
-        .carousel-slides { display: flex; height: 100%; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
-        .carousel-slide { min-width: 100%; height: 100%; position: relative; display: flex; align-items: center; padding: 80px; background-size: cover; background-position: center; }
-        .carousel-slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%); z-index: 1; }
-        .carousel-slide:nth-child(1) { background-image: url('https://bursa.meb.gov.tr/meb_iys_dosyalar/2025_10/30161840_1.jpg'); }
-        .carousel-slide:nth-child(2) { background-image: url('http://bursaihl.meb.k12.tr/meb_iys_dosyalar/16/01/363733/resimler/2025_05/15223130_whatsappimage20250515at19.59.163.jpg'); }
-        .carousel-slide:nth-child(3) { background-image: url('http://buhal.meb.k12.tr/meb_iys_dosyalar/16/15/964260/resimler/2025_12/16122321_osmangaziilcemilliegitimmudurluguhobaetkinlikleri.jpg'); }
-        .slide-content { position: relative; z-index: 2; max-width: 700px; }
-        .slide-category { display: inline-block; background: rgba(102, 126, 234, 0.9); backdrop-filter: blur(10px); padding: 10px 24px; border-radius: 25px; font-size: 14px; font-weight: 600; color: white; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
-        .slide-title { font-size: 52px; font-weight: 800; color: white; margin-bottom: 20px; line-height: 1.2; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
-        .slide-description { font-size: 19px; color: rgba(255, 255, 255, 0.95); margin-bottom: 30px; line-height: 1.6; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
-        .slide-school { display: flex; align-items: center; gap: 10px; font-size: 16px; color: rgba(255, 255, 255, 0.9); margin-bottom: 30px; font-weight: 500; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
-        .slide-btn { display: inline-flex; align-items: center; gap: 10px; background: white; color: #667eea; padding: 16px 36px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 16px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; }
-        .slide-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4); color: #667eea; }
-        .carousel-nav { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 10; }
-        .carousel-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, 0.4); border: 2px solid rgba(255, 255, 255, 0.6); cursor: pointer; transition: all 0.3s ease; }
-        .carousel-dot.active { width: 40px; border-radius: 6px; background: white; }
-        .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 55px; height: 55px; background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; cursor: pointer; transition: all 0.3s ease; z-index: 10; }
-        .carousel-arrow:hover { background: rgba(255, 255, 255, 0.4); transform: translateY(-50%) scale(1.1); }
-        .carousel-arrow.prev { left: 30px; }
-        .carousel-arrow.next { right: 30px; }
-        .stats-section { max-width: 1400px; margin: 50px auto; padding: 0 30px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .stat-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 35px 25px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
-        .stat-card:hover { transform: translateY(-10px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); }
-        .stat-icon { width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 32px; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
-        .stat-number { font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
-        .stat-label { font-size: 15px; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .category-section { max-width: 1400px; margin: 60px auto; padding: 0 30px; }
-        .category-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
-        .category-title { display: flex; align-items: center; gap: 15px; }
-        .category-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; }
-        .category-title h3 { font-size: 32px; font-weight: 700; color: white; margin: 0; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-        .category-count { font-size: 14px; color: rgba(255, 255, 255, 0.8); font-weight: 500; }
-        .category-nav { display: flex; gap: 10px; }
-        .category-nav-btn { width: 45px; height: 45px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; cursor: pointer; transition: all 0.3s ease; }
-        .category-nav-btn:hover { background: rgba(255, 255, 255, 0.3); transform: scale(1.1); }
-        .projects-carousel-container { position: relative; overflow: hidden; }
-        .projects-carousel { display: flex; gap: 25px; transition: transform 0.5s ease; }
-        .project-card { min-width: calc(33.333% - 17px); background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); transition: all 0.3s ease; }
-        .project-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); }
-        .project-image { height: 200px; position: relative; overflow: hidden; background: #eee; }
-        .project-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 70px; color: rgba(255, 255, 255, 0.3); }
-        .project-badge { position: absolute; top: 15px; left: 15px; background: rgba(255, 255, 255, 0.95); padding: 6px 16px; border-radius: 15px; font-size: 12px; font-weight: 600; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
-        .project-content { padding: 25px; }
-        .project-title { font-size: 19px; font-weight: 700; color: #2c3e50; margin-bottom: 10px; line-height: 1.3; }
-        .project-school { display: flex; align-items: center; gap: 8px; color: #7f8c8d; font-size: 13px; margin-bottom: 18px; font-weight: 500; }
-        .project-link { display: inline-flex; align-items: center; gap: 8px; color: #667eea; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease; }
-        .project-link:hover { gap: 12px; }
-        .category-akademik .category-icon, .category-akademik .project-image { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .category-akademik .project-badge { color: #667eea; }
-        .category-sosyal .category-icon, .category-sosyal .project-image { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-        .category-sosyal .project-badge { color: #f5576c; }
-        .category-sanat .category-icon, .category-sanat .project-image { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
-        .category-sanat .project-badge { color: #4facfe; }
-        .category-mesleki .category-icon, .category-mesleki .project-image { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
-        .category-mesleki .project-badge { color: #43e97b; }
-        .category-inovasyon .category-icon, .category-inovasyon .project-image { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
-        .category-inovasyon .project-badge { color: #fa709a; }
-        @media (max-width: 1200px) { .project-card { min-width: calc(50% - 12.5px); } }
-        @media (max-width: 768px) { .nav-menu { display: none; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .project-card { min-width: 100%; } .carousel-slide { padding: 40px; } .slide-title { font-size: 32px; } .carousel-arrow { display: none; } .hero-carousel { height: 400px; } .category-header { flex-direction: column; align-items: flex-start; gap: 15px; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: #666;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 5px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li a {
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-menu li a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-menu li a i {
+            font-size: 16px;
+        }
+
+        .btn-submit-nav {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white !important;
+            padding: 12px 28px !important;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+            border: none;
+        }
+
+        .btn-submit-nav:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 0;
+            background: white;
+            min-width: 240px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            display: none;
+            z-index: 1000;
+            list-style: none;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .dropdown.active .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li a {
+            padding: 12px 20px;
+            color: #2c3e50;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f8f9fa;
+            color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .dropdown-menu li a i {
+            font-size: 16px;
+            color: #a0aec0;
+            transition: color 0.3s;
+        }
+
+        .dropdown-menu li a:hover i {
+            color: #667eea;
+        }
+
+        .dropdown>a .bi-chevron-down {
+            font-size: 10px;
+            margin-left: 2px;
+            transition: transform 0.3s;
+        }
+
+        .dropdown.active>a .bi-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        /* Hero Carousel */
+        .hero-carousel {
+            max-width: 1400px;
+            margin: 50px auto;
+            padding: 0 30px;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-slides {
+            display: flex;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 80px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .carousel-slide:nth-child(1) {
+            background-image: url('https://bursa.meb.gov.tr/meb_iys_dosyalar/2025_10/30161840_1.jpg');
+        }
+
+        .carousel-slide:nth-child(2) {
+            background-image: url('http://bursaihl.meb.k12.tr/meb_iys_dosyalar/16/01/363733/resimler/2025_05/15223130_whatsappimage20250515at19.59.163.jpg');
+        }
+
+        .carousel-slide:nth-child(3) {
+            background-image: url('http://buhal.meb.k12.tr/meb_iys_dosyalar/16/15/964260/resimler/2025_12/16122321_osmangaziilcemilliegitimmudurluguhobaetkinlikleri.jpg');
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .slide-category {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide-title {
+            font-size: 52px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-description {
+            font-size: 19px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            line-height: 1.6;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-school {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .slide-school i {
+            font-size: 18px;
+        }
+
+        .slide-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #667eea;
+            padding: 16px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .slide-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            color: #667eea;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            width: 40px;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-arrow.prev {
+            left: 30px;
+        }
+
+        .carousel-arrow.next {
+            right: 30px;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            max-width: 1400px;
+            margin: 50px auto;
+            padding: 0 30px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 15px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Category Projects Section */
+        .category-section {
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 0 30px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .category-title h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-count {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+        .category-nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .category-nav-btn {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .projects-carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projects-carousel {
+            display: flex;
+            gap: 25px;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card {
+            min-width: calc(33.333% - 17px);
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .project-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 70px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 6px 16px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .project-school {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #7f8c8d;
+            font-size: 13px;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .project-school i {
+            font-size: 14px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            gap: 12px;
+        }
+
+        .project-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Category Colors */
+        .category-akademik .category-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .category-akademik .project-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .category-akademik .project-badge {
+            color: #667eea;
+        }
+
+        .category-sosyal .category-icon {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .category-sosyal .project-image {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .category-sosyal .project-badge {
+            color: #f5576c;
+        }
+
+        .category-sanat .category-icon {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .category-sanat .project-image {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .category-sanat .project-badge {
+            color: #4facfe;
+        }
+
+        .category-mesleki .category-icon {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .category-mesleki .project-image {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .category-mesleki .project-badge {
+            color: #43e97b;
+        }
+
+        .category-inovasyon .category-icon {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .category-inovasyon .project-image {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .category-inovasyon .project-badge {
+            color: #fa709a;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .project-card {
+                min-width: calc(50% - 12.5px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-card {
+                min-width: 100%;
+            }
+
+            .carousel-slide {
+                padding: 40px;
+            }
+
+            .slide-title {
+                font-size: 32px;
+            }
+
+            .carousel-arrow {
+                display: none;
+            }
+
+            .hero-carousel {
+                height: 400px;
+            }
+
+            .category-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
     </style>
-</head>
-<body>
+
+    <!-- Top Navigation -->
     <nav class="top-nav">
         <div class="nav-container">
             <div class="logo-section">
-                <div class="logo-icon"><i class="bi bi-star-fill"></i></div>
-                <div class="logo-text"><h1>Eğitimde İyi Örnekler</h1><p>Bursa İl Milli Eğitim Müdürlüğü</p></div>
+                <div class="logo-icon">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Eğitimde İyi Örnekler</h1>
+                    <p>Bursa İl Milli Eğitim Müdürlüğü</p>
+                </div>
             </div>
             <ul class="nav-menu">
+                <li><a href="#"><i class="bi bi-house-fill"></i> Ana Sayfa</a></li>
                 <li><a href="#"><i class="bi bi-house-fill"></i> Ana Sayfa</a></li>
                 <li class="dropdown">
                     <a href="#"><i class="bi bi-grid-3x3-gap-fill"></i> Kategoriler <i class="bi bi-chevron-down"></i></a>
@@ -119,71 +764,573 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Hero Carousel -->
     <section class="hero-carousel">
         <div class="carousel-container">
-            <div class="carousel-slides" id="carouselSlides">
-                <div class="carousel-slide"><div class="slide-content"><span class="slide-category">Akademik Başarılar</span><h2 class="slide-title">Bursa Bilim Şenliği</h2><p class="slide-description">Binlerce öğrencinin robotik kodlama ve yapay zeka projelerini sergilediği Bursa’nın en kapsamlı bilim buluşması.</p><div class="slide-school"><i class="bi bi-geo-alt-fill"></i><span>Bursa İl Milli Eğitim Müdürlüğü</span></div><a href="#" class="slide-btn">Detayları Gör <i class="bi bi-arrow-right"></i></a></div></div>
-                <div class="carousel-slide"><div class="slide-content"><span class="slide-category">Sanat ve Kültür</span><h2 class="slide-title">Tiyatro ve Şiir Dinletisi</h2><p class="slide-description">Öğrencilerin tiyatro yeteneklerini sergilediği etkileyici sahne performansı.</p><div class="slide-school"><i class="bi bi-geo-alt-fill"></i><span>Bursa Merkez Anadolu İHL</span></div><a href="#" class="slide-btn">Detayları Gör <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="carousel-slides" id="carouselSlides" style="transform: translateX(-100%);">
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <span class="slide-category">Akademik Başarılar</span>
+                        <h2 class="slide-title">Bursa Bilim Şenliği</h2>
+                        <p class="slide-description">Binlerce öğrencinin robotik kodlama, uzay teknolojileri ve yapay
+                            zeka atölyelerinde projelerini sergilediği Bursa'nın en kapsamlı bilim buluşması.</p>
+                        <div class="slide-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Bursa İl Milli Eğitim Müdürlüğü &amp; TÜBİTAK</span>
+                        </div>
+                        <a href="#" class="slide-btn">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <span class="slide-category">Sanat ve Kültür</span>
+                        <h2 class="slide-title">Tiyatro ve Şiir Dinletisi</h2>
+                        <p class="slide-description">Öğrencilerin tiyatro yeteneklerini sergilediği ve ünlü şairlerin
+                            eserlerini seslendirdiği etkileyici sahne performansı.</p>
+                        <div class="slide-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Bursa Merkez Anadolu İmam Hatip Lisesi</span>
+                        </div>
+                        <a href="#" class="slide-btn">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <span class="slide-category">Spor ve Sağlık</span>
+                        <h2 class="slide-title">Bursa Spor Günü</h2>
+                        <p class="slide-description">"Hareketli Okullar, Başarılı Adımlar" projesi kapsamında
+                            düzenlenen, tüm okulun katılımıyla gerçekleşen basketbol ve atletizm etkinlikleri.</p>
+                        <div class="slide-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Bursa Hürriyet Anadolu Lisesi - Osmangazi</span>
+                        </div>
+                        <a href="#" class="slide-btn">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-arrow prev" onclick="moveSlide(-1)"><i class="bi bi-chevron-left"></i></div>
-            <div class="carousel-arrow next" onclick="moveSlide(1)"><i class="bi bi-chevron-right"></i></div>
-            <div class="carousel-nav" id="carouselNav"></div>
+
+            <div class="carousel-arrow prev" onclick="moveSlide(-1)">
+                <i class="bi bi-chevron-left"></i>
+            </div>
+            <div class="carousel-arrow next" onclick="moveSlide(1)">
+                <i class="bi bi-chevron-right"></i>
+            </div>
+
+            <div class="carousel-nav" id="carouselNav"><div class="carousel-dot"></div><div class="carousel-dot active"></div><div class="carousel-dot"></div></div>
         </div>
     </section>
+
+    <!-- Stats Section -->
     <section class="stats-section">
         <div class="stats-grid">
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-folder-fill"></i></div><div class="stat-number">24</div><div class="stat-label">Toplam Proje</div></div>
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-building"></i></div><div class="stat-number">18</div><div class="stat-label">Okul</div></div>
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div><div class="stat-number">6</div><div class="stat-label">Kategori</div></div>
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-calendar-check"></i></div><div class="stat-number">8</div><div class="stat-label">Bu Ay</div></div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="bi bi-folder-fill"></i>
+                </div>
+                <div class="stat-number">24</div>
+                <div class="stat-label">Toplam Proje</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="bi bi-building"></i>
+                </div>
+                <div class="stat-number">18</div>
+                <div class="stat-label">Okul</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                </div>
+                <div class="stat-number">6</div>
+                <div class="stat-label">Kategori</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="bi bi-calendar-check"></i>
+                </div>
+                <div class="stat-number">8</div>
+                <div class="stat-label">Bu Ay</div>
+            </div>
         </div>
     </section>
-    <section id="akademik" class="category-section category-akademik">
+
+    <!-- Category: Akademik Başarılar -->
+    <section class="category-section category-akademik">
         <div class="category-header">
-            <div class="category-title"><div class="category-icon"><i class="bi bi-book"></i></div><div><h3>Akademik Başarılar</h3><div class="category-count">8 Proje</div></div></div>
-            <div class="category-nav"><div class="category-nav-btn" onclick="scrollCategory('akademik', -1)"><i class="bi bi-chevron-left"></i></div><div class="category-nav-btn" onclick="scrollCategory('akademik', 1)"><i class="bi bi-chevron-right"></i></div></div>
+            <div class="category-title">
+                <div class="category-icon">
+                    <i class="bi bi-book"></i>
+                </div>
+                <div>
+                    <h3>Akademik Başarılar</h3>
+                    <div class="category-count">8 Proje</div>
+                </div>
+            </div>
+            <div class="category-nav">
+                <div class="category-nav-btn" onclick="scrollCategory('akademik', -1)">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <div class="category-nav-btn" onclick="scrollCategory('akademik', 1)">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
         </div>
-        <div class="projects-carousel-container"><div class="projects-carousel" id="carousel-akademik">
-            <div class="project-card"><div class="project-image"><i class="bi bi-microscope project-icon"></i><span class="project-badge">Akademik</span></div><div class="project-content"><h4 class="project-title">Bilim Fuarı 2024</h4><div class="project-school"><span>Atatürk Anadolu Lisesi</span></div><a href="#" class="project-link">Detayları Gör</a></div></div>
-            <div class="project-card"><div class="project-image"><i class="bi bi-calculator project-icon"></i><span class="project-badge">Akademik</span></div><div class="project-content"><h4 class="project-title">Matematik Olimpiyatları</h4><div class="project-school"><span>Bursa Fen Lisesi</span></div><a href="#" class="project-link">Detayları Gör</a></div></div>
-            <div class="project-card"><div class="project-image"><i class="bi bi-globe project-icon"></i><span class="project-badge">Akademik</span></div><div class="project-content"><h4 class="project-title">Proje Yarışması</h4><div class="project-school"><span>Nilüfer Lisesi</span></div><a href="#" class="project-link">Detayları Gör</a></div></div>
-        </div></div>
+        <div class="projects-carousel-container">
+            <div class="projects-carousel" id="carousel-akademik">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-microscope project-icon"></i>
+                        <span class="project-badge">Akademik</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Bilim Fuarı 2024</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Atatürk Anadolu Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-calculator project-icon"></i>
+                        <span class="project-badge">Akademik</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Matematik Olimpiyatları</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Bursa Fen Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-globe project-icon"></i>
+                        <span class="project-badge">Akademik</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Uluslararası Proje Yarışması</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Nilüfer Anadolu Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-book-half project-icon"></i>
+                        <span class="project-badge">Akademik</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Edebiyat Yarışması</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Bursa Erkek Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="inovasyon" class="category-section category-inovasyon" style="margin-bottom: 80px;">
+
+    <!-- Category: Sosyal ve Kültürel -->
+    <section class="category-section category-sosyal">
         <div class="category-header">
-            <div class="category-title"><div class="category-icon"><i class="bi bi-lightbulb"></i></div><div><h3>İnovasyon</h3><div class="category-count">4 Proje</div></div></div>
-            <div class="category-nav"><div class="category-nav-btn" onclick="scrollCategory('inovasyon', -1)"><i class="bi bi-chevron-left"></i></div><div class="category-nav-btn" onclick="scrollCategory('inovasyon', 1)"><i class="bi bi-chevron-right"></i></div></div>
+            <div class="category-title">
+                <div class="category-icon">
+                    <i class="bi bi-people"></i>
+                </div>
+                <div>
+                    <h3>Sosyal ve Kültürel</h3>
+                    <div class="category-count">6 Proje</div>
+                </div>
+            </div>
+            <div class="category-nav">
+                <div class="category-nav-btn" onclick="scrollCategory('sosyal', -1)">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <div class="category-nav-btn" onclick="scrollCategory('sosyal', 1)">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
         </div>
-        <div class="projects-carousel-container"><div class="projects-carousel" id="carousel-inovasyon">
-            <div class="project-card"><div class="project-image"><i class="bi bi-rocket-takeoff-fill project-icon"></i><span class="project-badge">İnovasyon</span></div><div class="project-content"><h4 class="project-title">Genç Girişimciler</h4><div class="project-school"><span>Bursa Ticaret Lisesi</span></div><a href="#" class="project-link">Detayları Gör</a></div></div>
-            <div class="project-card"><div class="project-image"><i class="bi bi-plug-fill project-icon"></i><span class="project-badge">İnovasyon</span></div><div class="project-content"><h4 class="project-title">Akıllı Enerji</h4><div class="project-school"><span>Nilüfer MTAL</span></div><a href="#" class="project-link">Detayları Gör</a></div></div>
-        </div></div>
+        <div class="projects-carousel-container">
+            <div class="projects-carousel" id="carousel-sosyal">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-tree-fill project-icon"></i>
+                        <span class="project-badge">Sosyal</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Çevre Koruma Projesi</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Cumhuriyet İlkokulu</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-heart-fill project-icon"></i>
+                        <span class="project-badge">Sosyal</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Gönüllülük Kampanyası</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Yıldırım Ortaokulu</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-globe2 project-icon"></i>
+                        <span class="project-badge">Sosyal</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Kültürlerarası Diyalog</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Osmangazi Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-recycle project-icon"></i>
+                        <span class="project-badge">Sosyal</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Geri Dönüşüm Projesi</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Mudanya İlkokulu</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Category: Sanat ve Spor -->
+    <section class="category-section category-sanat">
+        <div class="category-header">
+            <div class="category-title">
+                <div class="category-icon">
+                    <i class="bi bi-palette"></i>
+                </div>
+                <div>
+                    <h3>Sanat ve Spor</h3>
+                    <div class="category-count">5 Proje</div>
+                </div>
+            </div>
+            <div class="category-nav">
+                <div class="category-nav-btn" onclick="scrollCategory('sanat', -1)">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <div class="category-nav-btn" onclick="scrollCategory('sanat', 1)">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="projects-carousel-container">
+            <div class="projects-carousel" id="carousel-sanat">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-music-note-beamed project-icon"></i>
+                        <span class="project-badge">Sanat</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Müzik Festivali</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Güzel Sanatlar Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-trophy project-icon"></i>
+                        <span class="project-badge">Spor</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Basketbol Turnuvası</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Hürriyet Anadolu Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-brush project-icon"></i>
+                        <span class="project-badge">Sanat</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Resim Sergisi</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Atatürk İlkokulu</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-camera-reels project-icon"></i>
+                        <span class="project-badge">Sanat</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Kısa Film Yarışması</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Nilüfer Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category: Mesleki Eğitim -->
+    <section class="category-section category-mesleki" style="margin-bottom: 80px;">
+        <div class="category-header">
+            <div class="category-title">
+                <div class="category-icon">
+                    <i class="bi bi-gear"></i>
+                </div>
+                <div>
+                    <h3>Mesleki Eğitim</h3>
+                    <div class="category-count">3 Proje</div>
+                </div>
+            </div>
+            <div class="category-nav">
+                <div class="category-nav-btn" onclick="scrollCategory('mesleki', -1)">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <div class="category-nav-btn" onclick="scrollCategory('mesleki', 1)">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="projects-carousel-container">
+            <div class="projects-carousel" id="carousel-mesleki">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-cpu-fill project-icon"></i>
+                        <span class="project-badge">Mesleki</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Robotik Kodlama Atölyesi</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Teknik Anadolu Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-tools project-icon"></i>
+                        <span class="project-badge">Mesleki</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Endüstri 4.0 Projesi</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Mesleki Teknik Lisesi</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-lightning-charge project-icon"></i>
+                        <span class="project-badge">Mesleki</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Elektrik-Elektronik Atölyesi</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Osmangazi MTAL</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="bi bi-wrench project-icon"></i>
+                        <span class="project-badge">Mesleki</span>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Makine Teknolojileri</h4>
+                        <div class="project-school">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Yıldırım MTAL</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Detayları Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Hero Carousel
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.getElementById('carouselNav');
-        slides.forEach((_, i) => { const dot = document.createElement('div'); dot.className = 'carousel-dot' + (i===0?' active':''); dot.onclick = () => goToSlide(i); dots.appendChild(dot); });
-        function updateSlide() {
-            document.getElementById('carouselSlides').style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-            document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+        const totalSlides = slides.length;
+        let autoSlideInterval;
+
+        const navContainer = document.getElementById('carouselNav');
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'carousel-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.onclick = () => goToSlide(i);
+            navContainer.appendChild(dot);
         }
-        function moveSlide(n) { currentSlide = (currentSlide + n + slides.length) % slides.length; updateSlide(); }
-        function goToSlide(i) { currentSlide = i; updateSlide(); }
-        setInterval(() => moveSlide(1), 6000);
-        const categoryPositions = { akademik: 0, inovasyon: 0, sosyal: 0, sanat: 0, mesleki: 0 };
-        function scrollCategory(cat, dir) {
-            const c = document.getElementById('carousel-' + cat);
-            const w = c.querySelector('.project-card').offsetWidth + 25;
-            categoryPositions[cat] = Math.max(0, Math.min(categoryPositions[cat] + dir * w, c.scrollWidth - c.parentElement.offsetWidth));
-            c.style.transform = 'translateX(-' + categoryPositions[cat] + 'px)';
+
+        function updateSlidePosition() {
+            const slidesContainer = document.getElementById('carouselSlides');
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
         }
-        document.addEventListener('DOMContentLoaded', () => {
-            const d = document.querySelector('.dropdown');
-            if(d) { d.querySelector('a').onclick = (e) => { e.preventDefault(); d.classList.toggle('active'); };
-            document.onclick = (e) => { if(!d.contains(e.target)) d.classList.remove('active'); }; }
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            updateSlidePosition();
+            resetAutoSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlidePosition();
+            resetAutoSlide();
+        }
+
+        function autoSlide() {
+            currentSlide++;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            updateSlidePosition();
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoSlide, 6000);
+        }
+
+        autoSlideInterval = setInterval(autoSlide, 6000);
+
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        carouselContainer.addEventListener('mouseleave', () => resetAutoSlide());
+
+        // Category Carousels
+        const categoryPositions = {
+            'akademik': 0,
+            'sosyal': 0,
+            'sanat': 0,
+            'mesleki': 0
+        };
+
+        function scrollCategory(category, direction) {
+            const carousel = document.getElementById(`carousel-${category}`);
+            const cardWidth = carousel.querySelector('.project-card').offsetWidth + 25; // card width + gap
+            const containerWidth = carousel.parentElement.offsetWidth;
+            const maxScroll = carousel.scrollWidth - containerWidth;
+
+            categoryPositions[category] += direction * cardWidth;
+
+            if (categoryPositions[category] < 0) {
+                categoryPositions[category] = 0;
+            }
+            if (categoryPositions[category] > maxScroll) {
+                categoryPositions[category] = maxScroll;
+            }
+
+            carousel.style.transform = `translateX(-${categoryPositions[category]}px)`;
+        }
+
+        // Dropdown menu toggle (from V2)
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdown = document.querySelector('.dropdown');
+            // Check if dropdown exists to prevent errors
+            if (dropdown) {
+                const dropdownToggle = dropdown.querySelector('a');
+
+                dropdownToggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            }
         });
     </script>
-</body>
-    </html>
+
+
+<div id="preact-border-shadow-host" popover="manual" style="border: none; padding: 0px; margin: 0px; inset: 0px; position: fixed; width: 100vw; height: 100vh; background: transparent; pointer-events: none;"></div></body></html>
