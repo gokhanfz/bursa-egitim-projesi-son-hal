@@ -49,7 +49,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
+    
+<script>
+  function sendHeight() {
+    const height = document.documentElement.scrollHeight;
+    parent.postMessage(
+      { type: "SET_HEIGHT", height: height },
+      "*"
+    );
+  }
 
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
+
+  // Dinamik içerik için (carousel vs.)
+  setInterval(sendHeight, 1000);
+</script>
+    
 <body>
     <style>
         * {
