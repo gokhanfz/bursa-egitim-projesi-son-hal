@@ -184,6 +184,24 @@
             display: block;
         }
 
+        /* Multi-level Dropdown Support */
+        .nav-menu .dropdown-menu .dropdown-submenu {
+            position: relative;
+        }
+
+        .nav-menu .dropdown-menu .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -5px;
+            display: none;
+            min-width: 200px;
+        }
+
+        /* Show on hover for desktop */
+        .nav-menu .dropdown-menu .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
         .nav-menu .dropdown-menu li {
             margin: 0;
         }
@@ -890,21 +908,67 @@
             <ul class="nav-menu">
                 <li><a href="#anasayfa"><i class="bi bi-house-fill"></i> Ana Sayfa</a></li>
                 <li class="dropdown">
-                    <a href="#kategoriler"><i class="bi bi-grid-3x3-gap-fill"></i> Kategoriler <i
-                            class="bi bi-chevron-down"></i></a>
+                    <a href="#"><i class="bi bi-geo-alt-fill"></i> İlçeler <i class="bi bi-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01AltMenu/441"
-                                target="_top"><i class="bi bi-book"></i> Akademik ve Bilimsel</a></li>
-                        <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01AltMenu/442"
-                                target="_top"><i class="bi bi-people"></i> Sosyal ve Kültürel</a></li>
-                        <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01AltMenu/443"
-                                target="_top"><i class="bi bi-palette"></i> Sanat ve Spor</a></li>
-                        <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01AltMenu/444"
-                                target="_top"><i class="bi bi-gear"></i> Mesleki Eğitim</a></li>
+                        <!-- Osmangazi -->
+                        <li class="dropdown-submenu">
+                            <a href="#">Osmangazi <i class="bi bi-chevron-right"
+                                    style="margin-left: auto; font-size: 12px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01AltMenu/441"
+                                        target="_blank">İlköğretim</a></li>
+                                <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01AltMenu/442"
+                                        target="_blank">Ortaöğretim</a></li>
+                                <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01AltMenu/443"
+                                        target="_blank">Mesleki ve Teknik</a></li>
+                            </ul>
+                        </li>
+                        <!-- Yıldırım -->
+                        <li class="dropdown-submenu">
+                            <a href="#">Yıldırım <i class="bi bi-chevron-right"
+                                    style="margin-left: auto; font-size: 12px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">İlköğretim</a></li>
+                                <li><a href="#">Ortaöğretim</a></li>
+                                <li><a href="#">Mesleki ve Teknik</a></li>
+                            </ul>
+                        </li>
+                        <!-- Nilüfer -->
+                        <li class="dropdown-submenu">
+                            <a href="#">Nilüfer <i class="bi bi-chevron-right"
+                                    style="margin-left: auto; font-size: 12px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">İlköğretim</a></li>
+                                <li><a href="#">Ortaöğretim</a></li>
+                                <li><a href="#">Mesleki ve Teknik</a></li>
+                            </ul>
+                        </li>
+                        <!-- Gürsu -->
+                        <li class="dropdown-submenu">
+                            <a href="#">Gürsu <i class="bi bi-chevron-right"
+                                    style="margin-left: auto; font-size: 12px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">İlköğretim</a></li>
+                                <li><a href="#">Ortaöğretim</a></li>
+                                <li><a href="#">Mesleki ve Teknik</a></li>
+                            </ul>
+                        </li>
+                        <!-- Kestel -->
+                        <li class="dropdown-submenu">
+                            <a href="#">Kestel <i class="bi bi-chevron-right"
+                                    style="margin-left: auto; font-size: 12px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">İlköğretim</a></li>
+                                <li><a href="#">Ortaöğretim</a></li>
+                                <li><a href="#">Mesleki ve Teknik</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#iletisim"><i class="bi bi-envelope-fill"></i> İletişim</a></li>
-                <li><a href="#proje-basvuru" class="btn-submit-nav"><i class="bi bi-send-fill"></i> Projenizi
+                <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01IcerikGoster/470"><i
+                            class="bi bi-envelope-fill"></i> İletişim</a></li>
+                <li><a href="https://bursa.meb.gov.tr/burbis/Projeler/PRO01Projeler/PRO01IcerikGoster/468"
+                        class="btn-submit-nav"><i class="bi bi-send-fill"></i> Projenizi
                         Paylaşın</a></li>
             </ul>
         </div>
