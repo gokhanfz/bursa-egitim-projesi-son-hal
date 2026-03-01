@@ -935,6 +935,17 @@
                 padding: 15px;
             }
 
+            .logo-text h1 {
+                font-size: 14px;
+                white-space: normal !important;
+                text-align: center;
+            }
+
+            .logo-text p {
+                font-size: 12px;
+                text-align: center;
+            }
+
             .nav-menu {
                 display: flex;
                 flex-wrap: wrap;
@@ -950,15 +961,87 @@
             .logo-section {
                 width: 100%;
                 justify-content: center;
+                flex-direction: column;
+                text-align: center;
             }
 
             .hero-carousel {
-                height: 400px;
+                height: auto;
+                min-height: 450px;
                 margin-top: 20px;
+                padding: 0 15px;
+            }
+
+            .carousel-slide {
+                padding: 30px 20px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .slide-title {
+                font-size: 26px;
+            }
+
+            .slide-description {
+                font-size: 15px;
+            }
+
+            .slide-school {
+                justify-content: center;
+            }
+
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .carousel-arrow.prev {
+                left: 10px;
+            }
+
+            .carousel-arrow.next {
+                right: 10px;
+            }
+
+            .stats-section {
+                padding: 0 15px;
+                margin: 30px auto;
             }
 
             .stats-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px 15px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+
+            .all-projects-section {
+                margin: 40px auto 20px;
+                padding: 0 15px;
+            }
+
+            .all-projects-title {
+                font-size: 28px;
+            }
+
+            .all-projects-subtitle {
+                font-size: 14px;
+            }
+
+            .category-section {
+                margin: 40px auto;
+                padding: 0 15px;
             }
 
             .category-header {
@@ -967,9 +1050,14 @@
                 gap: 15px;
             }
 
+            .category-title h3 {
+                font-size: 24px;
+            }
+
             .category-nav {
                 width: 100%;
-                justify-content: space-between;
+                justify-content: flex-start;
+                flex-wrap: wrap;
             }
 
             .project-card {
@@ -1133,28 +1221,28 @@
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="stats-grid">
-            <div class="stat-card" onclick="window.top.location.href='#ilceler'">
+            <div class="stat-card">
                 <div class="stat-icon">
                     <i class="bi bi-geo-alt-fill"></i>
                 </div>
                 <div class="stat-number">17</div>
                 <div class="stat-label">İlçe</div>
             </div>
-            <div class="stat-card" onclick="window.top.location.href='#okullar'">
+            <div class="stat-card">
                 <div class="stat-icon">
                     <i class="bi bi-building"></i>
                 </div>
                 <div class="stat-number">18</div>
                 <div class="stat-label">Okul</div>
             </div>
-            <div class="stat-card" onclick="window.top.location.href='#tum-projeler'">
+            <div class="stat-card">
                 <div class="stat-icon">
                     <i class="bi bi-folder-fill"></i>
                 </div>
                 <div class="stat-number">21</div>
                 <div class="stat-label">Toplam Proje</div>
             </div>
-            <div class="stat-card" onclick="window.top.location.href='#bu-ay'">
+            <div class="stat-card">
                 <div class="stat-icon">
                     <i class="bi bi-calendar-check-fill"></i>
                 </div>
@@ -1179,7 +1267,7 @@
                 </div>
                 <div>
                     <h3>Temel Eğitim</h3>
-                    
+
                 </div>
             </div>
             <div class="category-nav">
@@ -1366,7 +1454,7 @@
                 </div>
                 <div>
                     <h3>Ortaöğretim</h3>
-                    
+
                 </div>
             </div>
             <div class="category-nav">
@@ -1476,7 +1564,7 @@
                 </div>
                 <div>
                     <h3>Din Öğretimi</h3>
-                    
+
                 </div>
             </div>
             <div class="category-nav">
@@ -1565,7 +1653,7 @@
                 </div>
                 <div>
                     <h3>Mesleki ve Teknik Eğitim</h3>
-                    
+
                 </div>
             </div>
             <div class="category-nav">
@@ -1655,7 +1743,7 @@
                 </div>
                 <div>
                     <h3>Özel Eğitim ve Rehberlik</h3>
-                    
+
                 </div>
             </div>
             <div class="category-nav">
